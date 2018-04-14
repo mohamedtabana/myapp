@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "609980604638",
+    "firebase_url": "https://dietsystem2.firebaseio.com",
+    "project_id": "dietsystem2",
+    "storage_bucket": "dietsystem2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:609980604638:android:268cab47c9df3f3f",
+        "android_client_info": {
+          "package_name": "com.example.tabana.myapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "609980604638-td8pmir51v8933rhc6tbp0lm9c71jont.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_54tB8aoeh8QiwXf18Xmw_p5jL9nJFUg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
