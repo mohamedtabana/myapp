@@ -1,6 +1,7 @@
 package com.example.tabana.myapp;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.v4.view.PagerAdapter;
 import android.view.LayoutInflater;
@@ -54,7 +55,7 @@ public class silder_adapter extends PagerAdapter {
         ImageView silder_image_view = (ImageView)view.findViewById(R.id.imageView);
         TextView silder_heading = (TextView)view.findViewById(R.id.textView_hader1);
 
-
+        silder_heading.setTextColor(Color.WHITE);
         silder_image_view.setImageResource(silder_image1[position]);
         silder_heading.setText(Silder_heading[position]);
 

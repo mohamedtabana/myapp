@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.tabana.myapp.home_page">
+
+<RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bbblow"
-    tools:context="com.example.tabana.myapp.home_page">
+    >
 
 
     <LinearLayout
@@ -21,197 +28,234 @@
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true" />
+        android:layout_alignParentTop="true"
+
+        />
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true">
+        android:layout_below="@+id/doslayout"
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="291dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="301dp"
-            android:orientation="vertical">
+   >
+<RelativeLayout
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:layout_alignParentLeft="true"
+    android:background="#80000000"
+    android:layout_marginTop="15dp"
+    android:layout_marginLeft="15dp"
+    android:id="@+id/relativeLayout2">
+    <com.andexert.library.RippleView
+        android:id="@+id/more2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:rv_color="@android:color/background_light"
+        app:rv_rippleDuration="20"
+        app:rv_zoom="true"
+        android:onClick="Bmi"
+        android:elevation="30dp"
+        app:rv_centered="true">
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/note"
+        android:id="@+id/imageView2" />
 
-            <LinearLayout
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView2"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:text="BMI"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+    </com.andexert.library.RippleView>
+</RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/relativeLayout2"
+            android:layout_marginRight="15dp"
+            android:background="#80000000">
+
+            <com.andexert.library.RippleView
+                android:id="@+id/more3"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="15dp"
-                android:layout_weight="1">
+                android:elevation="30dp"
+                app:rv_centered="true"
+                app:rv_color="@android:color/background_light"
+                app:rv_rippleDuration="20"
+                app:rv_zoom="true">
 
-                <RelativeLayout
-                    android:id="@+id/rellay_gallery"
-                    android:layout_width="166dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.65"
-                    android:clickable="true"
-                    android:foreground="?attr/selectableItemBackground">
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/manfitness" />
 
-                    <RelativeLayout
-                        android:layout_width="85dp"
-                        android:layout_height="113dp"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentTop="true"
-                        android:layout_marginEnd="58dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageView3"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center_horizontal"
+                    android:text="Exercise"
+                    android:textColor="@color/white"
+                    android:textSize="20dp" />
+            </com.andexert.library.RippleView>
+        </RelativeLayout>
 
-                        <ImageView
-                            android:id="@+id/imgView5"
-                            android:layout_width="60dp"
-                            android:layout_height="60dp"
-                            android:layout_alignParentTop="true"
-                            android:layout_centerHorizontal="true"
-                            android:adjustViewBounds="true"
 
-                            android:background="@drawable/bmi"
-                            android:padding="8dp"
-                            android:scaleType="centerInside"
-                            android:tint="@color/white" />
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignTop="@+id/relativeLayout2"
+            android:layout_centerHorizontal="true"
+            android:background="#80000000"
+            android:id="@+id/relativeLayout3">
 
-                        <TextView
-                            android:id="@+id/bmi"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_centerHorizontal="true"
-                            android:layout_marginBottom="13dp"
-                            android:text="BMI"
-                            android:textSize="24sp" />
-
-                    </RelativeLayout>
-
-                    <RelativeLayout
-                        android:layout_width="85dp"
-                        android:layout_height="113dp"
-                        android:layout_alignParentStart="true"
-                        android:layout_alignParentTop="true"
-                        android:layout_marginStart="42dp">
-
-                        <ImageView
-                            android:id="@+id/imgView5"
-                            android:layout_width="60dp"
-                            android:layout_height="60dp"
-                            android:layout_alignParentTop="true"
-                            android:layout_centerHorizontal="true"
-                            android:adjustViewBounds="true"
-                            android:background="@drawable/food"
-                            android:padding="8dp"
-
-                            android:scaleType="centerInside"
-                            android:tint="@color/white" />
-
-                        <TextView
-                            android:id="@+id/food"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@+id/imgView5"
-                            android:layout_centerHorizontal="true"
-                            android:layout_marginTop="5dp"
-                            android:text="food"
-                            android:textSize="24sp" />
-
-                    </RelativeLayout>
-
-                </RelativeLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
+            <com.andexert.library.RippleView
+                android:id="@+id/more4"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="15dp"
-                android:layout_weight="1">
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:elevation="30dp"
+                app:rv_centered="true"
+                app:rv_color="@android:color/background_light"
+                app:rv_rippleDuration="20"
+                app:rv_zoom="true">
 
-                <RelativeLayout
-                    android:id="@+id/rellay_weather"
-                    android:layout_width="331dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.55"
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/cutlery" />
 
-                    android:clickable="true"
-                    android:foreground="?attr/selectableItemBackground">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageView4"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center_horizontal"
+                    android:text="Food"
+                    android:textColor="@color/white"
+                    android:textSize="20dp" />
+            </com.andexert.library.RippleView>
+        </RelativeLayout>
 
-                    <RelativeLayout
-                        android:layout_width="161dp"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="true">
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@+id/relativeLayout2"
+            android:layout_marginTop="18dp"
+            android:layout_toStartOf="@+id/relativeLayout3"
+            android:background="#80000000">
 
-                        <ImageView
-                            android:id="@+id/imgView7"
-                            android:layout_width="54dp"
-                            android:layout_height="60dp"
-                            android:layout_alignParentStart="true"
+            <com.andexert.library.RippleView
+                android:id="@+id/more5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:elevation="30dp"
+                app:rv_centered="true"
+                app:rv_color="@android:color/background_light"
+                app:rv_rippleDuration="20"
+                app:rv_zoom="true">
 
-                            android:layout_alignParentTop="true"
-                            android:layout_marginStart="42dp"
-                            android:adjustViewBounds="true"
-                            android:background="@drawable/chat"
-                            android:padding="8dp"
-                            android:scaleType="centerInside"
-                            android:tint="@color/white" />
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/chat" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="46dp"
-                            android:layout_alignStart="@+id/imgView7"
-                            android:layout_below="@+id/imgView7"
-                            android:text="chat"
-                            android:textSize="24sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageView5"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center_horizontal"
+                    android:text="Chat"
+                    android:textColor="@color/white"
+                    android:textSize="20dp" />
+            </com.andexert.library.RippleView>
+        </RelativeLayout>
 
-                    </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/relativeLayout4"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignTop="@+id/relativeLayout"
+            android:layout_toEndOf="@+id/relativeLayout3"
+            android:background="#80000000">
 
-                </RelativeLayout>
+            <com.andexert.library.RippleView
+                android:id="@+id/more6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
 
-                <RelativeLayout
-                    android:id="@+id/rellay_settings"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.65"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:elevation="30dp"
+                app:rv_centered="true"
+                app:rv_color="@android:color/background_light"
+                app:rv_rippleDuration="20"
+                app:rv_zoom="true">
 
-                    android:clickable="true"
-                    android:foreground="?attr/selectableItemBackground">
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/post" />
 
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentStart="true"
-                        android:layout_alignParentTop="true"
-                        android:layout_marginStart="0dp">
-
-                        <ImageView
-                            android:id="@+id/imgView8"
-                            android:layout_width="60dp"
-                            android:layout_height="60dp"
-                            android:layout_alignParentTop="true"
-                            android:layout_centerHorizontal="true"
-
-                            android:adjustViewBounds="true"
-                            android:background="@drawable/ic_media_route_connecting_04_dark"
-                            android:padding="8dp"
-                            android:scaleType="centerInside"
-                            android:tint="@color/white" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="52dp"
-                            android:layout_alignParentBottom="true"
-                            android:layout_centerHorizontal="true"
-                            android:layout_marginBottom="9dp"
-                            android:text="new Posts"
-                            android:textSize="24sp" />
-
-                    </RelativeLayout>
-
-                </RelativeLayout>
-
-            </LinearLayout>
-
-        </LinearLayout>
-
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageView6"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center_horizontal"
+                    android:text="Posts"
+                    android:textColor="@color/white"
+                    android:textSize="20dp" />
+            </com.andexert.library.RippleView>
+        </RelativeLayout>
     </RelativeLayout>
 
-
 </RelativeLayout>
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nvView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@android:color/white"
+        app:menu="@menu/drawer_view" />
+
+</android.support.v4.widget.DrawerLayout>

@@ -14,6 +14,8 @@
     <string name="newUser">Not a Member yet? Sign Up here.</string>
     <string name="fullName">Full Name</string>
     <string name="mobileNumber">Mobile Number</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
 
     <string name="confirmPassword">Confirm Password</string>
     <string name="terms_conditions">By clicking SignUp you agree all the Terms and Conditions.</string>
