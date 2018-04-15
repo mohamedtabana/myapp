@@ -54,46 +54,16 @@
                     <RelativeLayout
                         android:layout_width="85dp"
                         android:layout_height="113dp"
-                        android:layout_alignParentBottom="true"
-                        android:layout_centerHorizontal="true">
-
-                        <ImageView
-                            android:id="@+id/imgView5"
-                            android:layout_width="60dp"
-                            android:layout_height="60dp"
-                            android:layout_centerHorizontal="true"
-                            android:adjustViewBounds="true"
-                            android:background="@drawable/bmi"
-                            android:padding="8dp"
-                            android:scaleType="centerInside"
-
-                            android:tint="@color/white" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@+id/imgView5"
-                            android:layout_centerHorizontal="true"
-                            android:layout_marginTop="5dp"
-                            android:text="BMI"
-                            android:textSize="24sp" />
-
-                    </RelativeLayout>
-
-                    <RelativeLayout
-                        android:layout_width="85dp"
-                        android:layout_height="113dp"
-                        android:layout_alignParentBottom="true"
                         android:layout_alignParentEnd="true"
-                        android:layout_marginEnd="40dp">
+                        android:layout_alignParentTop="true"
+                        android:layout_marginEnd="58dp">
 
                         <ImageView
                             android:id="@+id/imgView5"
                             android:layout_width="60dp"
                             android:layout_height="60dp"
-                            android:layout_alignParentEnd="true"
                             android:layout_alignParentTop="true"
-                            android:layout_marginTop="11dp"
+                            android:layout_centerHorizontal="true"
                             android:adjustViewBounds="true"
 
                             android:background="@drawable/bmi"
@@ -102,11 +72,12 @@
                             android:tint="@color/white" />
 
                         <TextView
+                            android:id="@+id/bmi"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@+id/imgView5"
+                            android:layout_alignParentBottom="true"
                             android:layout_centerHorizontal="true"
-                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="13dp"
                             android:text="BMI"
                             android:textSize="24sp" />
 
@@ -115,29 +86,31 @@
                     <RelativeLayout
                         android:layout_width="85dp"
                         android:layout_height="113dp"
-                        android:layout_alignParentBottom="true"
                         android:layout_alignParentStart="true"
-                        android:layout_marginStart="30dp">
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="42dp">
 
                         <ImageView
                             android:id="@+id/imgView5"
                             android:layout_width="60dp"
                             android:layout_height="60dp"
+                            android:layout_alignParentTop="true"
                             android:layout_centerHorizontal="true"
                             android:adjustViewBounds="true"
-                            android:background="@drawable/bmi"
+                            android:background="@drawable/food"
                             android:padding="8dp"
-                            android:scaleType="centerInside"
 
+                            android:scaleType="centerInside"
                             android:tint="@color/white" />
 
                         <TextView
+                            android:id="@+id/food"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_below="@+id/imgView5"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="5dp"
-                            android:text="BMI"
+                            android:text="food"
                             android:textSize="24sp" />
 
                     </RelativeLayout>

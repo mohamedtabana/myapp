@@ -22,7 +22,8 @@
         <activity android:name=".login_coatch" />
         <activity android:name=".siginup_patient" />
         <activity android:name=".signup_coatch" />
-        <activity android:name=".home_page"></activity>
+        <activity android:name=".home_page" />
+        <activity android:name=".Calculator_BMI"></activity>
     </application>
 
 </manifest>
