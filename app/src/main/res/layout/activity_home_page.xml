@@ -43,19 +43,11 @@
     android:layout_height="100dp"
     android:layout_alignParentLeft="true"
     android:background="#80000000"
+    android:onClick="Bmi"
     android:layout_marginTop="15dp"
     android:layout_marginLeft="15dp"
     android:id="@+id/relativeLayout2">
-    <com.andexert.library.RippleView
-        android:id="@+id/more2"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:rv_color="@android:color/background_light"
-        app:rv_rippleDuration="20"
-        app:rv_zoom="true"
-        android:onClick="Bmi"
-        android:elevation="30dp"
-        app:rv_centered="true">
+
     <ImageView
         android:layout_width="50dp"
         android:layout_height="50dp"
@@ -75,7 +67,7 @@
         android:text="BMI"
         android:textColor="@color/white"
         android:textSize="20dp" />
-    </com.andexert.library.RippleView>
+
 </RelativeLayout>
 
 
@@ -87,15 +79,7 @@
             android:layout_marginRight="15dp"
             android:background="#80000000">
 
-            <com.andexert.library.RippleView
-                android:id="@+id/more3"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:elevation="30dp"
-                app:rv_centered="true"
-                app:rv_color="@android:color/background_light"
-                app:rv_rippleDuration="20"
-                app:rv_zoom="true">
+
 
                 <ImageView
                     android:id="@+id/imageView3"
@@ -116,7 +100,7 @@
                     android:text="Exercise"
                     android:textColor="@color/white"
                     android:textSize="20dp" />
-            </com.andexert.library.RippleView>
+
         </RelativeLayout>
 
 
@@ -128,17 +112,7 @@
             android:background="#80000000"
             android:id="@+id/relativeLayout3">
 
-            <com.andexert.library.RippleView
-                android:id="@+id/more4"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:elevation="30dp"
-                app:rv_centered="true"
-                app:rv_color="@android:color/background_light"
-                app:rv_rippleDuration="20"
-                app:rv_zoom="true">
+
 
                 <ImageView
                     android:id="@+id/imageView4"
@@ -159,7 +133,7 @@
                     android:text="Food"
                     android:textColor="@color/white"
                     android:textSize="20dp" />
-            </com.andexert.library.RippleView>
+
         </RelativeLayout>
 
         <RelativeLayout
@@ -171,17 +145,7 @@
             android:layout_toStartOf="@+id/relativeLayout3"
             android:background="#80000000">
 
-            <com.andexert.library.RippleView
-                android:id="@+id/more5"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:elevation="30dp"
-                app:rv_centered="true"
-                app:rv_color="@android:color/background_light"
-                app:rv_rippleDuration="20"
-                app:rv_zoom="true">
+
 
                 <ImageView
                     android:id="@+id/imageView5"
@@ -202,7 +166,7 @@
                     android:text="Chat"
                     android:textColor="@color/white"
                     android:textSize="20dp" />
-            </com.andexert.library.RippleView>
+
         </RelativeLayout>
 
         <RelativeLayout
@@ -213,18 +177,7 @@
             android:layout_toEndOf="@+id/relativeLayout3"
             android:background="#80000000">
 
-            <com.andexert.library.RippleView
-                android:id="@+id/more6"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
 
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:elevation="30dp"
-                app:rv_centered="true"
-                app:rv_color="@android:color/background_light"
-                app:rv_rippleDuration="20"
-                app:rv_zoom="true">
 
                 <ImageView
                     android:id="@+id/imageView6"
@@ -245,7 +198,7 @@
                     android:text="Posts"
                     android:textColor="@color/white"
                     android:textSize="20dp" />
-            </com.andexert.library.RippleView>
+
         </RelativeLayout>
     </RelativeLayout>
 
