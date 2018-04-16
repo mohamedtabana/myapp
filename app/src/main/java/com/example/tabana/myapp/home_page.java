@@ -1,6 +1,7 @@
 package com.example.tabana.myapp;
 import android.*;
 import android.Manifest;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -237,18 +238,22 @@ public class home_page extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if(requestCode == Gallary_intent && resultCode == RESULT_OK){
-
+            final ProgressDialog mDialog = new ProgressDialog(home_page.this);
+            mDialog.setMessage("Upload Photo .....");
+            mDialog.show();
             final Uri uri = data.getData();
             StorageReference filepath = FirebaseStorage.getInstance().getReference("patient").child(phoneID); // بعد كده نعلمها بالاي دي احسن
             filepath.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                 @Override
                 public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                     profileimage.setImageURI(uri);
+                    mDialog.dismiss();
                     Toast.makeText(home_page.this, "Success Upload", Toast.LENGTH_SHORT).show();
                 }
             }).addOnFailureListener(new OnFailureListener() {
                 @Override
                 public void onFailure(@NonNull Exception e) {
+                    mDialog.dismiss();
                     Toast.makeText(home_page.this, "Faild ...", Toast.LENGTH_SHORT).show();
                 }
             });
