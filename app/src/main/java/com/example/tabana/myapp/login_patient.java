@@ -50,8 +50,7 @@ public class login_patient extends AppCompatActivity {
         edtpassword = (EditText) findViewById(R.id.login_patient_password);
         btnSignIn = (Button) findViewById(R.id.login_patient_Btn);
 
-        final   FirebaseDatabase database = FirebaseDatabase.getInstance();
-        final DatabaseReference table_patient = database.getReference("patient");
+
 
         btnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,23 +58,27 @@ public class login_patient extends AppCompatActivity {
                 final ProgressDialog mDialog = new ProgressDialog(login_patient.this);
                 mDialog.setMessage("please waiting .....");
                 mDialog.show();
+                final   FirebaseDatabase database = FirebaseDatabase.getInstance();
+                final DatabaseReference table_patient = database.getReference("patient").child(edtphone.getText().toString());
 
+                table_patient.addListenerForSingleValueEvent(new ValueEventListener() {
 
-                table_patient.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
+                        if (dataSnapshot.exists()) {
+                            Patient patient = dataSnapshot.getValue(Patient.class);
 
-                    Patient patient = dataSnapshot.child(edtphone.getText().toString()).getValue(Patient.class);
+                            if (patient.getPassword().equals(edtpassword.getText().toString())) {
+                                mDialog.dismiss();
+                                Toast.makeText(login_patient.this, "Sign in SuccessFully and wall done !!", Toast.LENGTH_SHORT).show();
+                                Intent login_patient = new Intent(login_patient.this, home_page.class);
+                                login_patient.putExtra("PhoneID", edtphone.getText().toString());
+                                startActivity(login_patient);
 
-                    if (patient.getPassword().equals(edtpassword.getText().toString()))
-                    {
-                        Toast.makeText(login_patient.this, "Sign in SuccessFully and wall done !!", Toast.LENGTH_SHORT).show();
+                            }
+                        }
 
-                        Intent login_patient = new Intent(login_patient.this,home_page.class);
-                        startActivity(login_patient);
                     }
-                    }
-
                     @Override
                     public void onCancelled(DatabaseError databaseError) {
 
