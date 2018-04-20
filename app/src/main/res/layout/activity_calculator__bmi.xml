@@ -12,9 +12,8 @@
         android:layout_width="96dp"
         android:layout_height="wrap_content"
         android:layout_above="@+id/height"
-        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"
         android:layout_gravity="center_horizontal"
-        android:layout_marginStart="120dp"
         android:gravity="center_horizontal"
         android:text="Height (cm)"
         android:textColor="@color/yallow"
@@ -71,8 +70,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="17dp"
         android:textColor="@color/yallow"
-        android:textSize="24sp"
-        android:textStyle="bold" />
+        android:textSize="24sp" />
 
     <TextView
         android:id="@+id/textView4"
@@ -83,6 +81,5 @@
         android:layout_marginTop="40dp"
         android:text="Calculator  BMI "
         android:textColor="@color/yallow"
-        android:textSize="30sp"
-        android:textStyle="bold" />
+        android:textSize="30sp" />
 </RelativeLayout>

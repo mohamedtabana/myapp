@@ -85,10 +85,12 @@ public class home_page extends AppCompatActivity {
             filepath.getDownloadUrl().addOnCompleteListener(new OnCompleteListener<Uri>() {
                 @Override
                 public void onComplete(@NonNull Task<Uri> task) {
-                    Picasso.with(home_page.this)
-                            .load(task.getResult()).error(R.drawable.john)
-                            // .resize(420, 350)                        // optional
-                            .into(profileimage); //ivTest = > imageview
+                    if (task.isSuccessful()) {
+                        Picasso.with(home_page.this)
+                                .load(task.getResult()).error(R.drawable.john)
+                                // .resize(420, 350)                        // optional
+                                .into(profileimage); //ivTest = > imageview
+                    }
                 }
             });
 
@@ -194,6 +196,11 @@ public class home_page extends AppCompatActivity {
         Intent A = new Intent(home_page.this, Calculator_BMI.class);
         startActivity(A);
     }
+    public void Calorie(View view) {
+        Intent A = new Intent(home_page.this, calculator_bmr.class);
+        startActivity(A);
+    }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -207,7 +214,7 @@ public class home_page extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-
+       super.onBackPressed();
     }
     @Override
     public void onRequestPermissionsResult(int requestCode,
@@ -239,10 +246,10 @@ public class home_page extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if(requestCode == Gallary_intent && resultCode == RESULT_OK){
             final ProgressDialog mDialog = new ProgressDialog(home_page.this);
-            mDialog.setMessage("Upload Photo .....");
+            mDialog.setMessage("  please Wating ...for Upload your profile image ");
             mDialog.show();
             final Uri uri = data.getData();
-            StorageReference filepath = FirebaseStorage.getInstance().getReference("patient").child(phoneID); // بعد كده نعلمها بالاي دي احسن
+            StorageReference filepath = FirebaseStorage.getInstance().getReference("patient").child(phoneID);
             filepath.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                 @Override
                 public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
@@ -254,7 +261,7 @@ public class home_page extends AppCompatActivity {
                 @Override
                 public void onFailure(@NonNull Exception e) {
                     mDialog.dismiss();
-                    Toast.makeText(home_page.this, "Faild ...", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(home_page.this, "  Faild Upload..", Toast.LENGTH_SHORT).show();
                 }
             });
         }

@@ -3,11 +3,12 @@
     package="com.example.tabana.myapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:icon="@drawable/meee"
+        android:label="Intelligent Diet System"
         android:roundIcon="@drawable/meee"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -22,11 +23,12 @@
         <activity android:name=".login_coatch" />
         <activity android:name=".siginup_patient" />
         <activity android:name=".signup_coatch" />
-        <activity android:name=".home_page"
-            android:theme="@style/AppTheme2"
+        <activity
+            android:name=".home_page"
             android:label=""
-            />
-        <activity android:name=".Calculator_BMI"></activity>
+            android:theme="@style/AppTheme2" />
+        <activity android:name=".Calculator_BMI" />
+        <activity android:name=".calculator_bmr"></activity>
     </application>
 
 </manifest>

@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:background="@drawable/bbblow"
+    tools:context=".calculator_bmr">
+
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="350dp"
+        android:layout_height="39dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="40dp"
+        android:clickable="true"
+        android:gravity="center_horizontal"
+        android:text="Calculator Calorie "
+        android:textColor="@color/yallow"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+    <LinearLayout
+        android:paddingTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:layout_margin="5dp"
+        android:weightSum="1"
+
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".25"
+            android:paddingTop="5dp"
+            android:text="Activity"
+            android:textStyle="bold"
+            android:textColor="@color/yallow"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/activityBtn"
+            android:layout_width="62dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".6"
+            android:background="@drawable/clicked_button"
+            android:drawableEnd="@drawable/ic_arrow_down_black"
+            android:drawableRight="@drawable/ic_arrow_down_black"
+            android:paddingBottom="8dp"
+            android:paddingEnd="8dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="8dp"
+            android:text="select_one_of_activity"
+            android:textColor="@color/blown"
+            android:textSize="18sp"
+            android:textStyle="italic" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_margin="5dp"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".25"
+            android:text="Age"
+            android:textStyle="bold"
+            android:textColor="@color/yallow"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/ageEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".2"
+            android:inputType="number"
+            android:textColor="@color/aam3"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_margin="5dp"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".25"
+            android:text="Gender"
+            android:textStyle="bold"
+            android:textColor="@color/yallow"
+            android:textSize="20sp" />
+
+        <RadioGroup
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="clip_horizontal"
+            android:layout_weight=".6"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/femaleRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClicked"
+                android:text="Female"
+                android:textStyle="bold"
+                android:textColor="@color/yallow"
+                android:textSize="20sp" />
+
+            <RadioButton
+                android:id="@+id/maleRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClicked"
+                android:text="Male"
+                android:textStyle="bold"
+                android:textColor="@color/yallow"
+                android:textSize="20sp" />
+
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_margin="5dp"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".25"
+            android:text="Height"
+            android:textStyle="bold"
+            android:textColor="@color/yallow"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/heightEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".2"
+            android:inputType="number"
+            android:textColor="@color/wallet_bright_foreground_holo_dark"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".25"
+            android:text="   Cm"
+            android:textStyle="bold"
+            android:textColor="@color/yallow"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="5dp"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".25"
+            android:text="weight"
+            android:textStyle="bold"
+            android:textColor="@color/yallow"
+            android:textSize="20sp"/>
+
+        <EditText
+            android:id="@+id/weightEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".2"
+            android:inputType="number"
+            android:textColor="@color/aam3"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".25"
+            android:text="   Kg"
+            android:textStyle="bold"
+            android:textColor="@color/yallow"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="135dp"
+        android:layout_height="46dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="25dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/clicked_button"
+        android:onClick="Calculate"
+        android:text="calculate "
+        android:textColor="@color/blown"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/one"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="you need to "
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/yallow"/>
+
+        <TextView
+            android:id="@+id/littleToNoExercise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1,238 "
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/yallow"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Calorie "
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/yallow" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/two"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="you need to "
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/yallow"/>
+
+        <TextView
+            android:id="@+id/lightExercise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1,238 "
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/yallow" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Calorie "
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/yallow" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:id="@+id/three"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="you need to  "
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/yallow"/>
+
+        <TextView
+            android:id="@+id/ModerateExercise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1,238 "
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/yallow" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Calorie"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/yallow"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/four"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" you need to  "
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/yallow"/>
+
+
+        <TextView
+            android:id="@+id/HeavyExercise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1,238 "
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/yallow" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Calorie"
+            android:textColor="@color/yallow"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/five"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="you need to "
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/yallow"/>
+
+        <TextView
+            android:id="@+id/veryHeavyExercise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1,238 "
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/yallow"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Calorie "
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/yallow"/>
+    </LinearLayout>
+
+
+
+
+
+
+</LinearLayout>

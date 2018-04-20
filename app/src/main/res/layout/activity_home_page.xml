@@ -93,6 +93,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:rv_centered="true"
+                android:onClick="Calorie"
                 app:rv_color="@android:color/background_light"
                 app:rv_rippleDuration="20"
                 app:rv_zoom="true"
@@ -106,7 +107,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="10dp"
-                    android:background="@drawable/manfitness" />
+                    android:background="@drawable/bmi" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -114,7 +115,7 @@
                     android:layout_below="@+id/imageView3"
                     android:layout_centerHorizontal="true"
                     android:gravity="center_horizontal"
-                    android:text="Exercise"
+                    android:text="Calorie"
                     android:textColor="@color/white"
                     android:textSize="20dp" />
             </com.andexert.library.RippleView>
