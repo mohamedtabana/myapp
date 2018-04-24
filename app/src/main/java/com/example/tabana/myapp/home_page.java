@@ -30,6 +30,7 @@ import android.support.v4.view.PagerAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.tabana.myapp.DietSystem.Dietsystem;
 import com.example.tabana.myapp.model.Patient;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -278,4 +279,8 @@ public class home_page extends AppCompatActivity {
 
     }
 
+    public void Dietsystem(View view) {
+        Intent a = new Intent(this, Dietsystem.class);
+        startActivity(a);
+    }
 }

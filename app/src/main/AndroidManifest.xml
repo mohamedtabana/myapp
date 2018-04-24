@@ -28,7 +28,11 @@
             android:label=""
             android:theme="@style/AppTheme2" />
         <activity android:name=".Calculator_BMI" />
-        <activity android:name=".calculator_bmr"></activity>
+        <activity android:name=".calculator_bmr" />
+        <activity android:name=".DietSystem.Dietsystem"
+            android:label=""
+            android:theme="@style/AppTheme2"
+            ></activity>
     </application>
 
 </manifest>

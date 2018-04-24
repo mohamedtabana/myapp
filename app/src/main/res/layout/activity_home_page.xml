@@ -135,6 +135,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:rv_centered="true"
+                android:onClick="Dietsystem"
                 app:rv_color="@android:color/background_light"
                 app:rv_rippleDuration="20"
                 app:rv_zoom="true"
@@ -156,9 +157,9 @@
                     android:layout_below="@+id/imageView4"
                     android:layout_centerHorizontal="true"
                     android:gravity="center_horizontal"
-                    android:text="Food"
+                    android:text="Diet \n system"
                     android:textColor="@color/white"
-                    android:textSize="20dp" />
+                    android:textSize="15dp" />
             </com.andexert.library.RippleView>
         </RelativeLayout>
 

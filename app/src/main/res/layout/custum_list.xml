@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/Diet_image"
+        android:layout_width="150dp"
+        android:layout_height="120dp"
+         />
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/Diet_image"
+        android:background="@color/white_greyish"
+        />
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="11dp"
+        android:layout_toEndOf="@+id/Diet_image"
+        android:text="TextView"
+        android:textAlignment="textStart"
+        android:textColor="@android:color/background_light"
+        android:textSize="25dp"
+        android:id="@+id/Diet_Sub" />
+
+    <TextView
+        android:id="@+id/Diet_Detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/Diet_Sub"
+        android:layout_below="@+id/Diet_Sub"
+        android:text="TextView"
+        android:textAlignment="textStart"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="18dp" />
+
+    <ImageView
+        android:id="@+id/next"
+        android:layout_width="30dp"
+        android:layout_centerVertical="true"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:scaleType="centerCrop"
+        android:background="@drawable/next" />
+</RelativeLayout>
