@@ -37,6 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/Diet_Sub"
         android:layout_below="@+id/Diet_Sub"
+        android:fontFamily="casual"
         android:text="TextView"
         android:textAlignment="textStart"
         android:textColor="@android:color/holo_blue_dark"

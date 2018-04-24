@@ -41,7 +41,7 @@ public class Main extends Fragment {
 
 
         sub  = new String[]{"Breakfast", "Lunch", "Dinner", "Extra meal 1", "Extra meal 2"};
-        details = new String[]{"Meals during the morning", "Meals during the afternoon", "Meals during the night",
+        details = new String[]{"Meals during the morning", "Meals during the afternoon", "Meals during the "+"\n"+"night",
                 "Meals during the AnyTime", "Meals during the AnyTime"};
         Image = new int[]{R.drawable.cereal, R.drawable.roastturkey, R.drawable.food, R.drawable.diet, R.drawable.groceries};
 
