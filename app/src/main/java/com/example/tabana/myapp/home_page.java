@@ -281,6 +281,7 @@ public class home_page extends AppCompatActivity {
 
     public void Dietsystem(View view) {
         Intent a = new Intent(this, Dietsystem.class);
+        a.putExtra("phoneID",phoneID);
         startActivity(a);
     }
 }

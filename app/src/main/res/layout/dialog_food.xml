@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/breakfast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="Breakfast"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/breakfastcalories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/breakimage2"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_toEndOf="@+id/breakimage2"
+        android:fontFamily="casual"
+        android:text="Calories"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="20dp"
+        android:textStyle="italic" />
+
+    <View
+        android:layout_width="150dp"
+        android:layout_height="1px"
+        android:layout_alignBottom="@+id/breakfast"
+        android:layout_alignParentStart="true"
+        android:background="@color/white_greyish"
+        android:id="@+id/view" />
+
+    <ImageView
+        android:id="@+id/breakimage1"
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/plus"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/view" />
+
+    <ImageView
+        android:id="@+id/breakimage2"
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="5dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/plus"
+        android:layout_below="@+id/view"
+        android:layout_marginTop="1dp"
+        android:layout_toEndOf="@+id/breakimage1" />
+
+    <TextView
+        android:id="@+id/lunch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/breakimage1"
+        android:text="Lunch"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/lunchcalories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/breakfastcalories"
+        android:layout_alignTop="@+id/lunchimage2"
+        android:fontFamily="casual"
+        android:layout_marginTop="20dp"
+        android:text="Calories"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="20dp"
+        android:textStyle="italic" />
+
+    <View
+        android:layout_width="150dp"
+        android:layout_height="1px"
+        android:id="@+id/view2"
+        android:background="@color/white_greyish"
+        android:layout_below="@+id/lunch"/>
+
+    <ImageView
+        android:id="@+id/lunchimage1"
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/plus"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/view2" />
+
+    <ImageView
+        android:id="@+id/lunchimage2"
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/plus"
+        android:layout_marginLeft="5dp"
+        android:layout_below="@+id/view2"
+        android:scaleType="centerCrop"
+        android:layout_toEndOf="@+id/lunchimage1" />
+
+    <TextView
+        android:id="@+id/Dinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/lunchimage1"
+        android:text="Dinner"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/dinnercalories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/lunchcalories"
+        android:layout_alignTop="@+id/Dinnerimage2"
+        android:layout_marginTop="20dp"
+        android:fontFamily="casual"
+        android:text="Calories"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="20dp"
+        android:textStyle="italic" />
+    <View
+        android:layout_width="150dp"
+        android:layout_height="1px"
+        android:id="@+id/view3"
+        android:background="@color/white_greyish"
+        android:layout_below="@+id/Dinner"/>
+
+    <ImageView
+        android:id="@+id/Dinnerimage1"
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="1dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/plus"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/view3" />
+
+    <ImageView
+        android:id="@+id/Dinnerimage2"
+        android:layout_width="100dp"
+        android:background="@drawable/plus"
+        android:layout_height="70dp"
+        android:layout_marginTop="1dp"
+        android:scaleType="centerCrop"
+        android:layout_marginLeft="5dp"
+        android:layout_below="@+id/view3"
+        android:layout_toEndOf="@+id/Dinnerimage1" />
+
+    <TextView
+        android:id="@+id/Extrameal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/Dinnerimage1"
+        android:text="Extra Meal 1"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+    <View
+        android:layout_width="150dp"
+        android:layout_height="1px"
+        android:id="@+id/view4"
+        android:background="@color/white_greyish"
+        android:layout_below="@+id/Extrameal"/>
+
+    <ImageView
+        android:id="@+id/Extramealimage1"
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:background="@drawable/plus"
+        android:layout_marginTop="1dp"
+        android:scaleType="centerCrop"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/view4" />
+
+    <TextView
+        android:id="@+id/Extramealcalories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/dinnercalories"
+        android:layout_alignTop="@+id/Extramealimage2"
+        android:layout_marginTop="20dp"
+        android:fontFamily="casual"
+        android:text="Calories"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="20dp"
+        android:textStyle="italic" />
+
+    <ImageView
+        android:id="@+id/Extramealimage2"
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:background="@drawable/plus"
+        android:layout_marginTop="1dp"
+        android:layout_marginLeft="5dp"
+        android:scaleType="centerCrop"
+        android:layout_below="@+id/view4"
+        android:layout_toEndOf="@+id/Extramealimage1" />
+
+    <TextView
+        android:id="@+id/Extrameal2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/Extramealimage1"
+        android:text="Extra Meal 2"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/Extrameal2calories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/Extramealcalories"
+        android:layout_alignTop="@+id/Extrameal2image2"
+        android:layout_marginTop="20dp"
+        android:fontFamily="casual"
+        android:text="Calories"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="20dp"
+        android:textStyle="italic" />
+    <View
+        android:layout_width="150dp"
+        android:layout_height="1px"
+        android:id="@+id/view5"
+        android:background="@color/white_greyish"
+        android:layout_below="@+id/Extrameal2"/>
+
+    <ImageView
+        android:id="@+id/Extrameal2image1"
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/plus"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/view5" />
+
+    <ImageView
+        android:id="@+id/Extrameal2image2"
+        android:layout_width="100dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/plus"
+        android:layout_height="70dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginLeft="5dp"
+        android:layout_below="@+id/view5"
+        android:layout_toEndOf="@+id/Extrameal2image1" />
+
+</RelativeLayout>

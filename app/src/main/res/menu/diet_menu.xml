@@ -3,6 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
+        android:id="@+id/inbox"
         android:checkable="true"
         android:icon="@drawable/box"
         android:title="Inbox"
