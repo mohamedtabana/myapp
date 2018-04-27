@@ -47,7 +47,7 @@ static String phoneID;
 
         SharedPreferences prefs = getSharedPreferences("Notification", MODE_PRIVATE);
 
-       boolean restoredText = prefs.getBoolean("Notification", false);
+       boolean restoredText = prefs.getBoolean(phoneID+"Notification", false);
         if (restoredText != false) {
             inflater.inflate(R.menu.diet_menu2,menu);
         }
@@ -346,14 +346,16 @@ static String phoneID;
         final MediaPlayer  player = MediaPlayer.create(this,R.raw.openended);
         player.start();
         SharedPreferences.Editor editor = getSharedPreferences("Notification", MODE_PRIVATE).edit();
-        editor.putBoolean("Notification",true);
+        editor.putBoolean(phoneID+"Notification",true);
         editor.apply();
 
     }
     public void changeiconMenu2(){
 
         menu.getItem(0).setIcon(ContextCompat.getDrawable(this, R.drawable.box));
-
+        SharedPreferences.Editor editor = getSharedPreferences("Notification", MODE_PRIVATE).edit();
+        editor.putBoolean(phoneID+"Notification",false);
+        editor.apply();
 
     }
 
