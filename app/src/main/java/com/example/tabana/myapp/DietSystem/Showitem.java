@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import com.example.tabana.myapp.R;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -128,7 +129,15 @@ int Position;
                             }
                         }
 
-                        reference.setValue(new Addinbox(passenger.getUploadimage(),passenger.getCalories()));
+                        reference.setValue(new Addinbox(passenger.getUploadimage(),passenger.getCalories()))
+                                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                    @Override
+                                    public void onSuccess(Void aVoid) {
+                                        Dietsystem dietsystem = (Dietsystem) getActivity();
+                                        //عشان النوتيفيكيشن بناديها من الاكتيفيتي الرئيسيي
+                                        dietsystem.changeiconMenu();
+                                    }
+                                });
 
 
 

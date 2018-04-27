@@ -1,8 +1,11 @@
 package com.example.tabana.myapp.DietSystem;
 
 import android.app.Dialog;
+import android.content.SharedPreferences;
 import android.media.Image;
+import android.media.MediaPlayer;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -23,6 +26,7 @@ import com.squareup.picasso.Picasso;
 
 public class Dietsystem extends AppCompatActivity {
 static String phoneID;
+    private Menu menu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +44,18 @@ static String phoneID;
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.diet_menu,menu);
+
+        SharedPreferences prefs = getSharedPreferences("Notification", MODE_PRIVATE);
+
+       boolean restoredText = prefs.getBoolean("Notification", false);
+        if (restoredText != false) {
+            inflater.inflate(R.menu.diet_menu2,menu);
+        }
+        else {
+            inflater.inflate(R.menu.diet_menu,menu);
+        }
+
+        this.menu = menu;
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -315,12 +330,31 @@ static String phoneID;
             });
             //Toast.makeText(this, phoneID, Toast.LENGTH_SHORT).show();
 
-            
+
             dialog.show();
+            changeiconMenu2(); //change Menu Icon (Notification)
         }
         return super.onOptionsItemSelected(item);
     }
     public static String getphoneID(){
         return phoneID;
     }
+
+    public void changeiconMenu(){
+
+        menu.getItem(0).setIcon(ContextCompat.getDrawable(this, R.drawable.box2));
+        final MediaPlayer  player = MediaPlayer.create(this,R.raw.openended);
+        player.start();
+        SharedPreferences.Editor editor = getSharedPreferences("Notification", MODE_PRIVATE).edit();
+        editor.putBoolean("Notification",true);
+        editor.apply();
+
+    }
+    public void changeiconMenu2(){
+
+        menu.getItem(0).setIcon(ContextCompat.getDrawable(this, R.drawable.box));
+
+
+    }
+
 }
