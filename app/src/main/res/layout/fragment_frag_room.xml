@@ -1,0 +1,58 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bbblow"
+    tools:context="com.example.tabana.myapp.Chat.frag_room">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+<FrameLayout
+    android:id="@+id/Refresh_Recycle"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentTop="true"
+    android:layout_marginBottom="50dp"
+    >
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/Room_Recycle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+         />
+</FrameLayout>
+
+        <EditText
+            android:id="@+id/editTextroom"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="16dp"
+            android:layout_toStartOf="@+id/floatingActionButton"
+            android:background="@drawable/chat_editext"
+            android:drawablePadding="15dp"
+            android:hint="Type your Message"
+            android:inputType="textMultiLine"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="#50000000"
+            android:typeface="monospace" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/floatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="19dp"
+            app:rippleColor="#43B02A"
+            android:src="@drawable/sent"
+            app:fabSize="normal" />
+
+    </RelativeLayout>
+
+
+</FrameLayout>

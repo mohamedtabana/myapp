@@ -1,45 +1,38 @@
 package com.example.tabana.myapp.model;
 
-import android.widget.EditText;
+
 
 public class Patient {
 
-    private String Name;
-    private String Password;
-    private String Email ;
+    private String name;
+    private String password;
+    private String email ;
+    private String id;
 
 
     public Patient() {
     }
 
     public String getName() {
-        return Name;
-    }
-
-    public void setName(String name) {
-        Name = name;
+        return name;
     }
 
     public String getPassword() {
-        return Password;
-    }
-
-    public void setPassword(String password) {
-        Password = password;
+        return password;
     }
 
     public String getEmail() {
-        return Email;
+        return email;
+    }
+    public String getId() {
+        return id;
     }
 
-    public void setEmail(String email) {
-        Email = email;
-    }
-
-    public Patient(String name, String password, String email) {
-        Name = name;
-        Password = password;
-        Email = email;
+    public Patient(String name, String password, String email , String id) {
+        this.name = name;
+        this.password = password;
+        this.email = email;
+        this.id = id ;
 
 
 

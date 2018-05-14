@@ -63,7 +63,7 @@ public class siginup_patient extends AppCompatActivity {
                         else
                         {
                             mDialog.dismiss();
-                          Patient patient = new Patient(signup_patient_name.getText().toString(),signup_parient_password.getText().toString(),signup_patient_email.getText().toString());
+                          Patient patient = new Patient(signup_patient_name.getText().toString(),signup_parient_password.getText().toString(),signup_patient_email.getText().toString(),signup_patient_phone.getText().toString());
                             table_patient.child(signup_patient_phone.getText().toString()).setValue(patient);
                             Toast.makeText(siginup_patient.this, "sign up successfuly !", Toast.LENGTH_SHORT).show();
                             finish();

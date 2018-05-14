@@ -1,35 +1,26 @@
 package com.example.tabana.myapp;
-import android.*;
 import android.Manifest;
 import android.app.ProgressDialog;
-import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.content.res.Configuration;
 import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.ActivityCompat;
-import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
 import android.text.Html;
-import android.transition.Slide;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.SimpleAdapter;
-import android.support.v4.view.PagerAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.tabana.myapp.Chat.Chat;
 import com.example.tabana.myapp.DietSystem.Dietsystem;
 import com.example.tabana.myapp.model.Patient;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -63,7 +54,7 @@ public class home_page extends AppCompatActivity {
     private TextView[] dots;
     private silder_adapter silder_adapter;
     private  String phoneID;
-
+    boolean FromCoatch = false;
     @Override
     protected void onStart() {
         super.onStart();
@@ -83,6 +74,13 @@ public class home_page extends AppCompatActivity {
             phoneID = A.getString("PhoneID");
 
             StorageReference filepath = FirebaseStorage.getInstance().getReference("patient").child(phoneID);
+            if(A.getBoolean("fromCoatch") == true){
+
+                filepath = FirebaseStorage.getInstance().getReference("coatch").child(phoneID);
+                FromCoatch = true;
+            }
+
+
             filepath.getDownloadUrl().addOnCompleteListener(new OnCompleteListener<Uri>() {
                 @Override
                 public void onComplete(@NonNull Task<Uri> task) {
@@ -132,6 +130,9 @@ public class home_page extends AppCompatActivity {
         final MenuItem nav_email = menu.findItem(R.id.nav_second_fragment);
         nav_phone.setTitle(phoneID);
         DatabaseReference getdata = FirebaseDatabase.getInstance().getReference("patient").child(phoneID);
+        if(FromCoatch == true){
+            getdata = FirebaseDatabase.getInstance().getReference("coatch").child(phoneID);
+        }
         getdata.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -247,10 +248,13 @@ public class home_page extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if(requestCode == Gallary_intent && resultCode == RESULT_OK){
             final ProgressDialog mDialog = new ProgressDialog(home_page.this);
-            mDialog.setMessage("  please Wating ...for Upload your profile image ");
+            mDialog.setMessage("  please Waiting ...for Upload your profile image ");
             mDialog.show();
             final Uri uri = data.getData();
             StorageReference filepath = FirebaseStorage.getInstance().getReference("patient").child(phoneID);
+            if (FromCoatch == true){
+                filepath = FirebaseStorage.getInstance().getReference("coatch").child(phoneID);
+            }
             filepath.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                 @Override
                 public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
@@ -283,5 +287,12 @@ public class home_page extends AppCompatActivity {
         Intent a = new Intent(this, Dietsystem.class);
         a.putExtra("phoneID",phoneID);
         startActivity(a);
+    }
+
+    public void Chat(View view) {
+        Intent A = new Intent(this,Chat.class);
+        A.putExtra("phoneID",phoneID);
+        A.putExtra("FromCoatch",FromCoatch);
+        startActivity(A);
     }
 }

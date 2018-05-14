@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.github.library.bubbleview.BubbleTextView
+        android:id="@+id/bubbletext1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello BubbleTextVew"
+        android:padding="10dp"
+        android:textColor="@android:color/white"
+        app:arrowWidth="8dp"
+        app:angle="8dp"
+        app:arrowHeight="10dp"
+        app:arrowPosition="14dp"
+        app:arrowLocation="right"
+        android:textSize="20dp"
+        app:arrowCenter="true"
+        android:layout_marginBottom="5dp"
+        app:bubbleColor="#7EC0EE">
+
+    </com.github.library.bubbleview.BubbleTextView>
+    <com.github.library.bubbleview.BubbleTextView
+        android:id="@+id/bubbletext2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello BubbleTextVew"
+        android:padding="10dp"
+        android:textColor="@android:color/white"
+        app:arrowWidth="8dp"
+        app:angle="8dp"
+        android:textSize="20dp"
+        app:arrowHeight="10dp"
+        app:arrowPosition="14dp"
+        app:arrowLocation="left"
+        app:arrowCenter="true"
+        android:layout_marginBottom="5dp"
+        app:bubbleColor="#BFD641">
+
+    </com.github.library.bubbleview.BubbleTextView>
+
+</RelativeLayout>

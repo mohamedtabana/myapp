@@ -179,6 +179,7 @@
                 app:rv_centered="true"
                 app:rv_color="@android:color/background_light"
                 app:rv_rippleDuration="20"
+                android:onClick="Chat"
                 app:rv_zoom="true"
                 android:elevation="30dp"
                 >
@@ -242,8 +243,14 @@
                     android:textColor="@color/white"
                     android:textSize="20dp" />
             </com.andexert.library.RippleView>
+
+
         </RelativeLayout>
+
+
     </RelativeLayout>
+
+
 
 </RelativeLayout>
     <android.support.design.widget.NavigationView
